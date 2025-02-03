@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -13,39 +13,95 @@ nav {
   color: #fff;
   padding: 1rem;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6f61;
+}
+
+nav ul li a.active {
+  color: #ff6f61;
 }
 
 section {
-  padding: 2rem;
+  padding: 4rem 2rem;
   margin: 1rem auto;
-  max-width: 800px;
+  max-width: 1200px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 h1, h2, h3 {
   color: #333;
 }
 
-ul {
-  list-style-type: square;
-  padding-left: 20px;
+.skills .skill-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills .card {
+  background: #ff6f61;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  background: #f9f9f9;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #ff6f61;
+  border-radius: 5px;
+}
+
+.project-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-cards .card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  flex: 1 1 calc(50% - 20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form label {
@@ -62,16 +118,32 @@ form input, form textarea {
 }
 
 form button {
-  background: #333;
+  background: #ff6f61;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 form button:hover {
-  background: #555;
+  background: #e65a50;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #333;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ff6f61;
 }
 
 footer {
